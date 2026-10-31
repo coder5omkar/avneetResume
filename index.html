@@ -248,6 +248,44 @@
   }
   .contact svg { width: 11px; height: 11px; color: #38bdf8; flex: 0 0 auto; }
 
+  .social-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+  }
+  .social-label {
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-right: 2px;
+  }
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 4.5px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .035);
+    border: 1px solid rgba(255, 255, 255, .09);
+    transition: color .18s ease, background .18s ease, border-color .18s ease;
+  }
+  .social-link svg { width: 11px; height: 11px; flex: 0 0 auto; }
+  .social-link.ig svg { color: #f472b6; }
+  .social-link.yt svg { color: #f87171; }
+  .social-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .08);
+    border-color: rgba(255, 255, 255, .22);
+  }
+
   .hero-art {
     position: relative;
     width: 230px;
@@ -461,13 +499,13 @@
   /* ============ CURRENT ROLES ============ */
   .current-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
   .current-card {
     position: relative;
     overflow: hidden;
-    padding: 13px 14px 12px;
+    padding: 12px 12px 11px;
     background: linear-gradient(180deg, #ffffff, #f9fbff);
     border: 1px solid #e3eaf4;
     border-radius: 13px;
@@ -546,6 +584,12 @@
     letter-spacing: 1.1px;
     text-transform: uppercase;
     color: #64748b;
+  }
+  .current-role .role-date {
+    text-transform: none;
+    letter-spacing: .3px;
+    color: #4f46e5;
+    font-weight: 700;
   }
   .current-card ul {
     margin: 8px 0 0;
@@ -674,6 +718,21 @@
     text-transform: uppercase;
     color: #7c8aa0;
   }
+  .govt-tag {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 2px 5px;
+    font-size: 7.2px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    text-transform: none;
+    color: #b45309;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    vertical-align: 1px;
+    white-space: nowrap;
+  }
   .job ul {
     margin: 5px 0 0;
     padding: 0;
@@ -744,7 +803,8 @@
     gap: 5px;
     flex: 0 0 auto;
   }
-  .online-chips span {
+  .online-chips span,
+  .online-chips a {
     font-size: 7px;
     font-weight: 700;
     letter-spacing: .8px;
@@ -755,7 +815,9 @@
     padding: 3px 6px;
     border-radius: 999px;
     white-space: nowrap;
+    text-decoration: none;
   }
+  .online-chips a:hover { background: #bae6fd; }
 
   /* ============ SKILLS ============ */
   .split {
@@ -1132,6 +1194,18 @@
               Pune, India
             </span>
           </div>
+
+          <div class="social-row">
+            <span class="social-label">Follow</span>
+            <a class="social-link ig" href="https://www.instagram.com/magic_of_physics_/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              @magic_of_physics_
+            </a>
+            <a class="social-link yt" href="https://www.youtube.com/@magic_of_physicss" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>
+              @magic_of_physicss
+            </a>
+          </div>
         </div>
 
         <div class="hero-art">
@@ -1168,7 +1242,7 @@
     <!-- ================= STATS ================= -->
     <div class="stats">
       <div class="stat"><b>10+</b><span>Years Teaching</span></div>
-      <div class="stat"><b>02</b><span>Current Institutes</span></div>
+      <div class="stat"><b>03</b><span>Current Institutes</span></div>
       <div class="stat"><b>03</b><span>Exam Tracks</span></div>
       <div class="stat"><b>10–12</b><span>Classes Taught</span></div>
     </div>
@@ -1188,7 +1262,7 @@
               Passionate and dedicated <strong>Physics Lecturer with 10+ years of experience</strong> in offline and online coaching.
               Known for making complex concepts simple, visual and memorable, and for helping students convert understanding into
               strong results in board exams and competitive exams such as <strong>NEET and JEE</strong>. Currently teaching at
-              <strong>Chate Coaching Classes</strong> and <strong>Purva Career Institute</strong>, while mentoring students across Nagpur.
+              <strong>Chate Coaching Classes</strong>, <strong>Purva Career Institute</strong> and <strong>Mindseed Tutorials</strong>, while mentoring students across Nagpur.
             </p>
           </div>
           <div class="philosophy">
@@ -1210,10 +1284,9 @@
           <article class="current-card">
             <div class="current-top">
               <span class="badge-current">Currently Working</span>
-              <span class="when-pill">2025 – Present</span>
             </div>
             <h3>Chate Coaching Classes</h3>
-            <p class="current-role">Physics Lecturer</p>
+            <p class="current-role">Physics Lecturer <span class="role-date">· 2025 – Present</span></p>
             <ul>
               <li>Teaching Class 11 &amp; 12 Physics for board and entrance exam preparation.</li>
               <li>Running concept lectures, doubt sessions and regular tests to track progress.</li>
@@ -1224,14 +1297,26 @@
           <article class="current-card">
             <div class="current-top">
               <span class="badge-current">Currently Working</span>
-              <span class="when-pill">2025 – Present</span>
             </div>
             <h3>Purva Career Institute</h3>
-            <p class="current-role">Physics Lecturer</p>
+            <p class="current-role">Physics Lecturer <span class="role-date">· 2025 – Present</span></p>
             <ul>
               <li>Delivering Physics lectures for Class 11–12 aligned with board and competitive syllabi.</li>
               <li>Preparing assignments, question banks and structured revision material.</li>
               <li>Monitoring individual performance and giving personalised improvement feedback.</li>
+            </ul>
+          </article>
+
+          <article class="current-card">
+            <div class="current-top">
+              <span class="badge-current">Currently Working</span>
+            </div>
+            <h3>Mindseed Tutorials</h3>
+            <p class="current-role">Physics Faculty <span class="role-date">· 2025 – Present</span></p>
+            <ul>
+              <li>Teaching Physics with a concept-first approach for school and junior college students.</li>
+              <li>Using real-life examples and visual explanations to simplify difficult topics.</li>
+              <li>Strengthening board exam preparation through revision sessions and practice tests.</li>
             </ul>
           </article>
         </div>
@@ -1248,19 +1333,6 @@
 
         <div class="subhead"><span>2025 – 2026</span></div>
         <div class="timeline">
-          <article class="job recent">
-            <div class="job-top">
-              <h3>Mindseed Tutorials</h3>
-              <span class="when">2025 – 2026</span>
-            </div>
-            <p class="job-role">Physics Faculty</p>
-            <ul>
-              <li>Taught Physics with a concept-first approach for school and junior college students.</li>
-              <li>Used real-life examples and visual explanations to simplify difficult topics.</li>
-              <li>Strengthened board exam preparation through revision sessions and practice tests.</li>
-            </ul>
-          </article>
-
           <article class="job recent">
             <div class="job-top">
               <h3>Ideal Coaching Class</h3>
@@ -1317,7 +1389,7 @@
               <h3>Yash Academy — JNV Gondia &amp; Yavatmal</h3>
               <span class="when">2023 – 2024</span>
             </div>
-            <p class="job-role">Visiting Lecturer · External Faculty</p>
+            <p class="job-role">Visiting Lecturer · External Faculty <span class="govt-tag">(Central Government School)</span></p>
             <ul>
               <li>Delivered weekend lectures to students of Jawahar Navodaya Vidyalayas.</li>
               <li>Focused on concept clarity and problem-solving for board and competitive exams.</li>
@@ -1385,7 +1457,7 @@
           <div class="online-chips">
             <span>Zoom</span>
             <span>Meet</span>
-            <span>YouTube</span>
+            <a href="https://www.youtube.com/@magic_of_physicss" target="_blank" rel="noopener">YouTube</a>
           </div>
         </div>
       </section>
